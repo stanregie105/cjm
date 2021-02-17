@@ -1,0 +1,84 @@
+const path = require("path");
+const express = require("express");
+const morgan = require("morgan");
+const rateLimit = require("express-rate-limit");
+const helmet = require("helmet");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const compression = require("compression");
+const cors = require("cors");
+const userRoute = require("./server/routes/userRoutes");
+const globalErrorHandler = require("./server/controllers/errorController");
+const vehicleRoute = require('./server/routes/vehicleRoutes');
+
+
+// Start express app
+const app = express();
+
+app.enable("trust proxy");
+
+// Serve static files from the React app
+/*
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "client/public/index.html"));
+});
+*/
+app.use(compression());
+
+// 1) GLOBAL MIDDLEWARES
+// Implement CORS
+app.use(cors());
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin: 'https://www.natours.com'
+// }))
+
+app.options("*", cors());
+// app.options('/api/v1/tours/:id', cors());
+
+// Serving static files
+app.use(express.static(path.join(__dirname, "public")));
+
+// Set security HTTP headers
+app.use(helmet());
+
+// Development logging
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
+
+// Limit requests from same API
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: "Too many requests from this IP, please try again in an hour!",
+});
+app.use("/api", limiter);
+
+// Body parser, reading data from body into req.body
+app.use(express.json({ limit: "10kb" }));
+app.use(express.urlencoded({ extended: true, limit: "10kb" }));
+
+// Data sanitization against NoSQL query injection
+app.use(mongoSanitize());
+
+// Data sanitization against XSS
+app.use(xss());
+
+// 3) ROUTES
+app.use("/api/v1/users", userRoute);
+app.use("/api/v1/vehicles", vehicleRoute);
+
+
+app.use(globalErrorHandler);
+
+module.exports = app;
