@@ -10,6 +10,10 @@ const cors = require("cors");
 const userRoute = require("./server/routes/userRoutes");
 const globalErrorHandler = require("./server/controllers/errorController");
 const vehicleRoute = require('./server/routes/vehicleRoutes');
+const orderRoute = require('./server/routes/orderRoutes');
+const bodyParser = require("body-parser")
+
+
 
 
 // Start express app
@@ -77,6 +81,7 @@ app.use(xss());
 // 3) ROUTES
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/vehicles", vehicleRoute);
+app.use("/api/v1/order", orderRoute);
 
 
 app.use(globalErrorHandler);

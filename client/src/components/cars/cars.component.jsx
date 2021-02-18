@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchCars } from "../../actions/index";
-import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Media} from "reactstrap";
 
 const Car = ({ cars, fetchCars }) => {
   useEffect(() => {
@@ -11,8 +11,10 @@ const Car = ({ cars, fetchCars }) => {
   if (cars === undefined || cars === null) {
     return <div></div>;
   }
+  /*
   return (
     <div className="row">
+        <div className='container'>
       <h1>CARS</h1>
       {cars.map(({ id, image, name }) => (
         <div key={id} className="col-12 col-md-6 home-container">
@@ -24,35 +26,42 @@ const Car = ({ cars, fetchCars }) => {
           </Card>
         </div>
       ))}
+      </div>
     </div>
-    /*
+    )
+   */
         return(
            
             <React.Fragment>
                 <div className='row'>
-                    <Media list>
-               {cars.map(car=>{
-              <div key={car.id} className='col-12'>
-
+                <div className='container'>
+                <Media list className='mt-5'>  
+               {cars.map(({id,image, name,description})=>{
+            return(
+              <div key={id} className='col-12'>
+                  
                     <Media tag='li'>
                     <Media left middle>
-                        <Media object src={car.image} alt={car.name}/>
+                        <Media object src={image} alt={name}/>
                     </Media>
                     <Media body className='ml-5'>
-                        <Media heading>{car.name}</Media>
-                        <p>{car.description}</p>
+                        <Media heading>{name}</Media>
+                        <p>{description}</p>
                     </Media>
                     </Media>
+                   
                     </div>
-                 
-                 </Media>
+            );
+               })};
+                </Media>
+                </div>
                  </div>
                  
                 </React.Fragment>
            
-            )
-            */
-  );
+            );
+            
+  
 };
 
 const mapStateToProps = (state) => ({
