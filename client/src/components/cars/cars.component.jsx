@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchCars } from "../../actions/index";
-import { Media} from "reactstrap";
+import { Card, CardImg, CardImgOverlay, CardTitle, Media} from "reactstrap";
 
 const Car = ({ cars, fetchCars }) => {
   useEffect(() => {
     fetchCars();
   }, [fetchCars]);
-  //console.log(cars);
+  console.log(cars);
   if (cars === undefined || cars === null) {
     return <div></div>;
   }
-  /*
+  
   return (
     <div className="row">
         <div className='container'>
@@ -29,7 +29,8 @@ const Car = ({ cars, fetchCars }) => {
       </div>
     </div>
     )
-   */
+   
+  /*
         return(
            
             <React.Fragment>
@@ -60,6 +61,7 @@ const Car = ({ cars, fetchCars }) => {
                 </React.Fragment>
            
             );
+            */
             
   
 };

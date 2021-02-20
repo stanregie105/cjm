@@ -7,7 +7,7 @@
       "ratingsAverage": 4.7,
       "price": 397,
       "description": "This ride is priced between $54000 - $74000 The Benz E350 replaces E300 as the power rises from 241 to 255 horsepower that brings a slight fuel economy improvement. All models no comes with blind spot and passive entry as standard equipments. The E350 comes ith four cylinders with 255hp as opposed to E450 with 362hp. The E class is comfort biased as the handling is competent, not too sporty. The steering is slightly weighted- not too light or too heavy and feels accurate. The fuel economy is great as it 26mpg combined with rear wheel drive.",
-      "image": "car-1-1a.jpg"
+      "image": "/images/cars/car-1-1a.jpg"
      
     },
   
@@ -18,7 +18,7 @@
       "ratingsAverage": 4.8,
       "price": 497,
       "description": "The average list price for this car is around $41000. The 2015 cls has agile handling and responsive. The base cls 400 is powered by a potent 329hp twin-charged 3.0 litres V6 engine mated to a seven-speed automatic transmission. The cls has up to four seats with leathery upholstery. The cls also comes ith a standard infotainment system that relies on a central knob.",
-      "image":  "car-1-2b.jpg"
+      "image":  "/images/cars/car-1-2b.jpg"
      },
      {
         "id": 2,
@@ -27,7 +27,7 @@
         "ratingsAverage": 4.8,
         "price": 497,
         "description": "The price ranges around $19000 - $46000. The new c400 4Matic can be likened to a new mini-lomiusine. The base price range around $49515. The c400 introduce the ne C-class with 329hp with twin-turbo V6 that mercedes will use in a host of other coming vehicles to give it a V8 power.The c400 thrives best in interstate with its firm ride excellent seat and solid sense of straight head.Highway driving at 10mpg produces 22mpg test average. Asteady tailwind will be needed to get 25mpg.",
-        "image":  "car-1-3c.jpg"
+        "image":  "/images/cars/car-1-3c.jpg"
     },
     {
         "id": 3,
@@ -36,7 +36,7 @@
         "ratingsAverage": 4.5,
         "price": 497,
         "description": "This car is priced around $22000 - $35000. The GLA drives more like a car than an SUV. it has a precise steering and a sharp handling and the suspension does a good job by smoothening out road bumps while still having an enjoyable ride. Thogh all-heel drive is available, front-wheel drive is standard. This car comes with a standard 208hp turbocharged four cylinder engine. The GLA gets 25mpg in the city and 34mpg on the highway. The GLA has up to 5 seats with synthetic leather upholstery. The GLA also has a standard infotainment system with 5.8-inch display, bluetooth and a USB port.",
-        "image":  "car-2-1d.jpg"
+        "image":  "/images/cars/car-2-1d.jpg"
     },
   
     {
@@ -46,7 +46,7 @@
         "ratingsAverage": 4.7,
         "price": 497,
         "description": "This car goes around $17000 - $23000. The 2015 BMW X1 has powertrain at 240horsepower, turbocharged 2.0 liter four cylinder engine. The X1's ride is smooth and it has a carlike handling, thanks to a lo center of gravity and a small frame. This catr gives one of the best fuel economy rating, at 23mpg in the city and 33mpg on the highway. The BMW seats 5 people in to rows. There are two complete sets of LATCH child-seat connectors on the rear outboard seat and a tether connector in the middle seat. The 2015 comes dtandard ith automatic climate control and infotainment system with 8 speaker audio system, bluetooth and a USB port.",
-        "image":  "car-2-2e.jpg"
+        "image":  "/images/cars/car-2-2e.jpg"
     },
   
     {
@@ -56,7 +56,7 @@
         "ratingsAverage": 4.8,
         "price": 497,
         "description": "The Audi Q7 has an upscale styling, everyday practicality and sure-footed quattro all-wheel-drive. The Q7 is powered by either a 280-horsepower turbocharged diesel V6. The Q7 offers a comfortable standard all-wheel-drive. The audi has a rating of about 19mpg in the city and 28mpg on the highway. The 2015 Q7 seats 7 on standard leathery upholstery. it has an infotainment system that includes 11-speaker sound system, and satellite radio.",
-        "image":  "car-2-3f.jpg"
+        "image":  "/images/cars/car-2-3f.jpg"
     },
 
     {
@@ -66,7 +66,7 @@
         "ratingsAverage": 4.8,
         "price": 497,
         "description": "This is priced around $31631 - $63309. The 2015 mercedes M-class is available with four powertrain that range from 200hp four cylinder diesel engine to a 518hp twin-turbocharged V8 in AMG model. All engines come with seven-speed automatic transmission. Rear wheel drive is standard with the base ML350 model. The ML350 gives a decent power and acceleration for daily driving. The standard ML350 with its V6 delivers 18mpg in city and 23mpg in highway.  The 2015 M class is a 2 row SUV ith 5 seats and leathery upholstery. It also comes with infotainment system that supports touch-screen functionality.",
-        "image":  "car-3-1g.jpg"
+        "image":  "/images/cars/car-3-1g.jpg"
     },
 
     {
@@ -76,7 +76,7 @@
         "ratingsAverage": 4.8,
         "price": 497,
         "description": "This is priced around $40260 - $48810. The base 2015 BMW X5 is powered by a 300hp twin-turbocharged six cylinder engine it is also available in 255hp tin turbocharged six-cylinder and a 445hp twin-turbo V8 engine. All models come with an eight speed automatic transmission, and all but the base model feature all-wheel-drive. The BMW has sporty handling, and it remains firmly planted around tight corners. The base model runs 19mpg in the city and 27mpg on the highway, which are just above average class. The BMW X5 has 5 seating in two rows, while some models come in 3 rows. The BMW comes with an abundance of standard features, including push button start and panoramic moonroof, and intuitive infotainment system with navigtion, satellite radi0, and 10.2 inch display.",
-        "image":  "car-3-2h.jpg"
+        "image":  "/images/cars/car-3-2h.jpg"
     },
 
     {
@@ -86,6 +86,6 @@
         "ratingsAverage": 4.8,
         "price": 497,
         "description": "This is priced around $33425. The 2015 Q3 features 200hp turbocharged engine mated with a six speed automatic transmission. Models come with either four-wheel drive or quattro all-wheel drive. It has tight steering but there's some body roll hen going around curves. The ride is also a bit firm. The 2015 Q3 also has good gas mileage estimated at 20mpg in city and 28mpg on highway. All Q3 models has dual zone automatic climate control, panoramic sunroof and a push-button start. its infotainment system has 7-inch display, Bluetooth, a 10 speaker stereo, HD radio ans satellite radio.",
-        "image":  "car-3-3i.jpg"
+        "image":  "/images/cars/car-3-3i.jpg"
     }
   ]
