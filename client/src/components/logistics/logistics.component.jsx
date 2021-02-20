@@ -7,12 +7,12 @@ const Logistic=()=>(
 <div className='row apartment'>
     
       <div className='col-sm-6'>
-        <img src="/img/trailer1.jpg" className='rover'/>
+        <img src="/img/oiltruck.jpg" className='rover'/>
       </div>
       <div className='col-sm-6'>
          <img src="/img/trailer2c.jpg"/>
       </div>
-      <p>We are fully on site ready to shuttle your goods from any location within the country. We are ever ready to serve you with our trucks which are very efficient and duely reliable to serve you. </p>
+      <p>We are fully on site ready to shuttle your goods and crude oil from any location within the country. We are ever ready to serve you with our trucks which are very efficient and duely reliable. </p>
     </div>
     <h2>Air Freight</h2>
     <div className='row apartment'>
@@ -32,9 +32,9 @@ const Logistic=()=>(
       <img src="/img/cargo1c.jpg" className='rover'/>
     </div>
     <div className='col-sm-6'>
-       <img src="/img/cargo2.jpg"/>
+       <img src="/img/oilship.jpg"/>
     </div>
-    <p>Our ships are fully functional and reliable to deliver your products from any part of the world. Your freight is duely safe with us.</p>
+    <p>Our ships are fully functional and reliable to deliver your products/crude oil from any part of the world. Your consignment is duely safe with us.</p>
   </div>
 </React.Fragment>
 );

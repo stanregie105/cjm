@@ -2,6 +2,7 @@ import { createStore, combineReducers} from 'redux';
 //import { reducer as formReducer} from 'redux-form';
 import CarsReducer from './reducer_car';
 import post from './post';
+import talk from './talk';
 //import { InitialFeedback} from './forms';
 import { applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -17,7 +18,8 @@ export const ConfigureStore=() =>{
     const store = createStore(
     combineReducers({
         cars: CarsReducer,
-        post
+        post,
+        talk
        }),
       
        applyMiddleware(logger,thunk)

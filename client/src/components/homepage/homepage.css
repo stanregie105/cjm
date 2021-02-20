@@ -1,0 +1,30 @@
+.vision{
+    margin-left:300px;
+    color:#9fa5ee;
+}
+
+.top-item{
+    background-image: linear-gradient(rgba(29, 3, 3, 0.199),rgba(9, 5, 68, 0.541));
+    height:400px;
+}
+
+.mid-item {
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+  color:#1e8a79;
+}
+.mid-term h4{
+    color:#f8fda0;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: row;
+    margin-left: 600px;
+}
+
+.next-item{
+    background-image: linear-gradient(rgba(10, 3, 100, 0.26),rgba(4, 14, 104, 0.315));
+    height:200px;
+}

@@ -7,7 +7,7 @@ const Car = ({ cars, fetchCars }) => {
   useEffect(() => {
     fetchCars();
   }, [fetchCars]);
-  console.log(cars);
+  //console.log(cars);
   if (cars === undefined || cars === null) {
     return <div></div>;
   }

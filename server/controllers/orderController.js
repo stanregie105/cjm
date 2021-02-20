@@ -8,7 +8,7 @@ const Order = require('./../models/orderModel');
 // @access   Private
 exports.postOrder= catchAsync(async (req, res) => {
    
-   console.log(req.body);
+   //console.log(req.body);
    
       const newOrder = new Order({
         firstname: req.body.firstname,

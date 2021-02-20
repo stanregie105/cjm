@@ -28,14 +28,14 @@ const Contact=({addPost})=>{
   const onSubmit = e => {
     e.preventDefault();
     addPost({firstname,lastname,telephone,email,order});
-    //setFormData('');
+    setFormData({firstname:'', lastname:'',telephone:'',email:'',order:''});
   };
   return(
 <React.Fragment>
 <div className="container">
             <div className ="row">
                   <Breadcrumb>
-                  <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                  <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
                   <BreadcrumbItem>Contact Us</BreadcrumbItem>
                   </Breadcrumb>
                   <div className="col-12">
@@ -44,7 +44,7 @@ const Contact=({addPost})=>{
                       </div>
                 </div>
             <div className="row row-content">
-                <div className="col-sm-4">
+                <div className="col-sm-3">
                 </div>
                 <div className="col-12 col-sm-6 ">
                          <h3>Location Information</h3>
@@ -54,9 +54,9 @@ const Contact=({addPost})=>{
                         512 Rd, G close, Festac Town<br />
                            <br />
                         LAGOS<br />
-                        <i className="fa fa-phone"></i>: +234 7031855342<br />
-                        <i className="fa fa-fax"></i>: +234 8023058279<br />
-                        <i className="fa fa-envelope"></i>: <a href="mailto:juliwillventures72@gmail.com">juliwillventures72@gmail.com</a>
+                        <i className="fa fa-phone"></i>: +2348115157725<br />
+                        <i className="fa fa-fax"></i>: +2347037315763<br />
+                        <i className="fa fa-envelope"></i>: <a href="mailto:chiubaikpeama667@yahoo.com">chiubaikpeama667@yahoo.com</a>
                         </address>
                     <div className="col-12 col-sm-11 offset-sm-1">
                     <div className="btn-group" role="group">
@@ -70,9 +70,9 @@ const Contact=({addPost})=>{
                
             </div>
             <div className="row row-content">
-                <div className="col-12">
-                    <h3>Send Us Your Feedback</h3>
-                </div>
+                <div className="col-12 contactnow">
+                    <h3>Place Your Order</h3>
+                
         <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input
@@ -127,7 +127,8 @@ const Contact=({addPost})=>{
         </div>
         <input type="submit" className="btn btn-primary" value="Order" />
       </form>
-            </div>
+      </div>
+        </div>
         </div>
         </React.Fragment>
   )

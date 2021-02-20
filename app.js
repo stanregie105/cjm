@@ -11,7 +11,8 @@ const userRoute = require("./server/routes/userRoutes");
 const globalErrorHandler = require("./server/controllers/errorController");
 const vehicleRoute = require('./server/routes/vehicleRoutes');
 const orderRoute = require('./server/routes/orderRoutes');
-const bodyParser = require("body-parser")
+const talkRoute = require('./server/routes/talkRoutes');
+//const bodyParser = require("body-parser")
 
 
 
@@ -22,7 +23,7 @@ const app = express();
 app.enable("trust proxy");
 
 // Serve static files from the React app
-/*
+
 if (process.env.NODE_ENV == "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -34,7 +35,7 @@ if (process.env.NODE_ENV == "production") {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "client/public/index.html"));
 });
-*/
+
 app.use(compression());
 
 // 1) GLOBAL MIDDLEWARES
@@ -82,6 +83,7 @@ app.use(xss());
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/vehicles", vehicleRoute);
 app.use("/api/v1/order", orderRoute);
+app.use("/api/v1/talk", talkRoute);
 
 
 app.use(globalErrorHandler);

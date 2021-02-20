@@ -26,13 +26,13 @@ class Header extends Component{
                 <Navbar dark expand="md">
                  <NavbarToggler onClick={this.toggleNav}/>
                  <NavbarBrand className ="mr-auto" href="/">
-                 SI
+                 CJM
                 </NavbarBrand>
          <Collapse isOpen={this.state.isNavOpen} navbar> 
             <Nav navbar>
                <NavItem>
                     <NavLink className="nav-link" to="/cars">
-                    <span className="fa fa-info fa-lg"></span>cars
+                    <span className="fa fa-info fa-lg"></span>Cars
                     </NavLink>
                 </NavItem>
                 <NavItem>
