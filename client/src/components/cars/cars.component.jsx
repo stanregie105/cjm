@@ -11,7 +11,7 @@ const Car = ({ cars, fetchCars }) => {
   if (cars === undefined || cars === null) {
     return <div></div>;
   }
-  
+  /*
   return (
     <div className="row">
         <div className='container'>
@@ -29,8 +29,9 @@ const Car = ({ cars, fetchCars }) => {
       </div>
     </div>
     )
+    */
    
-  /*
+  
         return(
            
             <React.Fragment>
@@ -61,7 +62,7 @@ const Car = ({ cars, fetchCars }) => {
                 </React.Fragment>
            
             );
-            */
+            
             
   
 };
