@@ -7,6 +7,6 @@ export const fetchCars = () => async (dispatch) => {
   console.log(res.data);
   dispatch({
     type: FETCH_CARS,
-    payload: res.data.data.data
+    payload: res.data.data
   });
 };
