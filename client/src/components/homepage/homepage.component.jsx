@@ -31,7 +31,7 @@ const HomePage =({addTalk})=> {
     return (
       <React.Fragment>
         <div className="row">
-          <div className="col-12 col-md-6 vision">
+          <div className="col-12 vision">
             <h2>Vision Statement</h2>
             <p>We aim to effectively satisfy our clients demands and make their needs our topmost priority. In summary, We are here to serve your needs. </p>
           </div>
@@ -52,7 +52,7 @@ const HomePage =({addTalk})=> {
     <div className="col-12">
                     <h3>Get newsletters about our services and latest products</h3>
                 </div>
-        <div className="edit-form">
+        <div className="edit-form col-12">
         <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input
