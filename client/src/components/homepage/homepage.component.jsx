@@ -51,8 +51,8 @@ const HomePage =({addTalk})=> {
     <div className='next-item row'>
     <div className="col-12">
                     <h3>Get newsletters about our services and latest products</h3>
-                </div>
-        <div className="edit-form col-12">
+               
+        
         <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input

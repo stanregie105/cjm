@@ -19,12 +19,13 @@
 .mid-term h4{
     color:#f8fda0;
 }
-
+/*
 .edit-form{
     display: flex;
     flex-direction: row;
     margin-left: 600px;
 }
+*/
 
 .next-item{
     background-image: linear-gradient(rgba(10, 3, 100, 0.26),rgba(4, 14, 104, 0.315));
