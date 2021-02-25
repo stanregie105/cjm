@@ -38,14 +38,9 @@ const HomePage =({addTalk})=> {
         </div>
     <div className='top-item row'>
     <div className="col-12 col-md-6 mid-item">
-            <h4>What We Offer</h4>
-            <ul>
-              <li>Logistics services within and outside the country </li>
-              <li>Wholesale and retail services of our products such as cars, electronics, Fashion, medical equipments and lots more. </li>
-              <li>IT Solutions and information security services.</li>
-              <li>Consulting and Real Estates.</li>
-              <li>Manufacturing.</li>
-            </ul>
+            <h2>Broker Your Automobile, Airline, and Logistics services.</h2>
+            <p>The best deals you would always want to strike that makes you happy with your wheels stands in front of you. Your comfort is our top priority.</p>
+           
           </div>
       </div>
     <div className='next-item row'>
