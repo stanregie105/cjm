@@ -20,9 +20,9 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/cars" component={Car} />
-            <Route path="/logistics" component={Logistic} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/cars" component={Car} />
+            <Route exact path="/logistics" component={Logistic} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
           <Footer />
         </BrowserRouter>
