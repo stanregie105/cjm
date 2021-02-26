@@ -4,4 +4,9 @@
 .apartment p{
     margin-left: 180px;
 }
+.trace:hover {
+    opacity: 0.6;
+    transition:0.4s;
+    transform: 3s;
+}
 

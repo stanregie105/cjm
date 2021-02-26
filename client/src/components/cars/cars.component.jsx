@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchCars } from "../../actions/index";
 import { Card, CardImg, CardImgOverlay, CardTitle, Media} from "reactstrap";
+//import './cars.css';
 
 const Car = ({ cars, fetchCars }) => {
   useEffect(() => {

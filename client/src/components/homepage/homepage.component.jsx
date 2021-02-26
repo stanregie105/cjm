@@ -39,7 +39,7 @@ const HomePage =({addTalk})=> {
     <div className='top-item row'>
     <div className="col-12 col-md-6 mid-item">
             <h2>Broker Your Automobile, Airline, and Logistics services.</h2>
-            <p>The best deals you would always want to strike that makes you happy with your wheels stands in front of you. Your comfort is our top priority.</p>
+            <p>The best deals you would always want to strike that makes you happy with your wheels stand in front of you. Your comfort is our top priority.</p>
            
           </div>
       </div>

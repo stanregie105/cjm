@@ -7,10 +7,10 @@ const Logistic=()=>(
 <div className='row apartment'>
     
       <div className='col-sm-6'>
-        <img src="/img/oiltruck.jpg" className='rover'/>
+        <img  src="/img/oiltruck.jpg" className='rover trace'/>
       </div>
       <div className='col-sm-6'>
-         <img src="/img/trailer2c.jpg"/>
+         <img className='trace' src="/img/trailer2c.jpg"/>
       </div>
     </div>
     <div className='row'>
@@ -23,10 +23,10 @@ const Logistic=()=>(
     <div className='row apartment'>
     
       <div className='col-sm-6'>
-        <img src="/img/air1.jpg" className='rover'/>
+        <img src="/img/air1.jpg" className='rover trace'/>
       </div>
       <div className='col-sm-6'>
-         <img src="/img/air2.jpg"/>
+         <img src="/img/air2.jpg" className='trace'/>
       </div>
     </div>
     <div className='row'>
@@ -39,10 +39,10 @@ const Logistic=()=>(
     <div className='row apartment'>
     
     <div className='col-sm-6'>
-      <img src="/img/cargo1c.jpg" className='rover'/>
+      <img src="/img/cargo1c.jpg" className='rover trace'/>
     </div>
     <div className='col-sm-6'>
-       <img src="/img/oilship.jpg"/>
+       <img src="/img/oilship.jpg" className='trace'/>
     </div>
   </div>
   <div className='row'>
