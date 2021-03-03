@@ -40,7 +40,7 @@ app.get("*", (req, res) => {
 if (process.env.NODE_ENV === "production") {
   // Set static folder
   // Serving static files
-  app.use( '*', express.static(path.join(__dirname, "client/build")));
+  app.use(express.static(path.join(__dirname, "client/build")));
   // app.use(express.static("client/build"));
 
    //app.get("*", (req, res) => {
