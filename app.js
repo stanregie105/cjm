@@ -62,6 +62,9 @@ app.use("/api/v1/vehicles", vehicleRoute);
 app.use("/api/v1/order", orderRoute);
 app.use("/api/v1/talk", talkRoute);
 
+// Serving static files
+app.use(express.static(path.join(__dirname, "public")));
+
 if (process.env.NODE_ENV === "production") {
   // Set static folder
   // Serving static files
@@ -91,8 +94,7 @@ app.use(cors());
 app.options("*", cors());
 // app.options('/api/v1/tours/:id', cors());
 
-// Serving static files
-app.use(express.static(path.join(__dirname, "public")));
+
 
 // Set security HTTP headers
 app.use(helmet());
