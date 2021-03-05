@@ -12,6 +12,8 @@ const globalErrorHandler = require("./server/controllers/errorController");
 const vehicleRoute = require('./server/routes/vehicleRoutes');
 const orderRoute = require('./server/routes/orderRoutes');
 const talkRoute = require('./server/routes/talkRoutes');
+const mongoose = require("mongoose");
+
 //const bodyParser = require("body-parser")
 
 
@@ -23,19 +25,7 @@ const app = express();
 app.enable("trust proxy");
 
 
-const DB = process.env.DATABASE.replace(
-  "<password>",
-  process.env.DATABASE_PASSWORD
-);
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("DB connection successful!"));
 
 // Serve static files from the React app
 /*
@@ -99,6 +89,20 @@ app.use(mongoSanitize());
 
 // Data sanitization against XSS
 app.use(xss());
+
+const DB = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
+
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("DB connection successful!"));
 
 // 3) ROUTES
 app.use("/api/v1/users", userRoute);
