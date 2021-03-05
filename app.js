@@ -42,6 +42,36 @@ app.get("*", (req, res) => {
 });
 */
 
+const DB = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
+
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("DB connection successful!"));
+
+// 3) ROUTES
+app.use("/api/v1/users", userRoute);
+app.use("/api/v1/vehicles", vehicleRoute);
+app.use("/api/v1/order", orderRoute);
+app.use("/api/v1/talk", talkRoute);
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  // Serving static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // app.use(express.static("client/build"));
+  app.use('*', express.static(path.join(__dirname, "client", "build")));
+   //app.get("*", (req, res) => {
+    //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+   //});
+}
 
 
 
@@ -90,36 +120,6 @@ app.use(mongoSanitize());
 // Data sanitization against XSS
 app.use(xss());
 
-const DB = process.env.DATABASE.replace(
-  "<password>",
-  process.env.DATABASE_PASSWORD
-);
-
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("DB connection successful!"));
-
-// 3) ROUTES
-app.use("/api/v1/users", userRoute);
-app.use("/api/v1/vehicles", vehicleRoute);
-app.use("/api/v1/order", orderRoute);
-app.use("/api/v1/talk", talkRoute);
-
-if (process.env.NODE_ENV === "production") {
-  // Set static folder
-  // Serving static files
-  app.use(express.static(path.join(__dirname, "client/build")));
-  // app.use(express.static("client/build"));
-  app.use('*', express.static(path.join(__dirname, "client", "build")));
-   //app.get("*", (req, res) => {
-    //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-   //});
-}
 
 
 app.use(globalErrorHandler);
