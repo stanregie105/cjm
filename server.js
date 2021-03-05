@@ -10,30 +10,8 @@ process.on("uncaughtException", (err) => {
 dotenv.config({ path: "./config.env" });
 const app = require("./app");
 
-const DB = process.env.DATABASE.replace(
-  "<password>",
-  process.env.DATABASE_PASSWORD
-);
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("DB connection successful!"));
 
-  if (process.env.NODE_ENV === "production") {
-    // Set static folder
-    // Serving static files
-    app.use(express.static(path.join(__dirname, "client/build")));
-    // app.use(express.static("client/build"));
-    app.use('*', express.static(path.join(__dirname, "client", "build")));
-     //app.get("*", (req, res) => {
-      //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-     //});
-  }
   
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {

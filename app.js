@@ -22,6 +22,21 @@ const app = express();
 
 app.enable("trust proxy");
 
+
+const DB = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
+
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("DB connection successful!"));
+
 // Serve static files from the React app
 /*
 if (process.env.NODE_ENV === "production") {
@@ -90,6 +105,17 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/vehicles", vehicleRoute);
 app.use("/api/v1/order", orderRoute);
 app.use("/api/v1/talk", talkRoute);
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  // Serving static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // app.use(express.static("client/build"));
+  app.use('*', express.static(path.join(__dirname, "client", "build")));
+   //app.get("*", (req, res) => {
+    //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+   //});
+}
 
 
 app.use(globalErrorHandler);
